@@ -1,0 +1,319 @@
+// =============================================
+// COLLECTION PAGE JS — collection.js
+// =============================================
+
+(function () {
+  const pieces = [
+    {
+      id: 1,
+      name: "Ivory Weave Bangle",
+      category: "Chunky",
+      price: "£18",
+      material: "Woven Cord & Silver Toggle",
+      description: "Double-strand ivory cord hand-woven into a smooth rounded bangle with a polished silver toggle closure.",
+      color: "#F5ECD9",
+      tag: "Bestseller",
+      Image: "./images/IMG_9296.JPG",
+    },
+    {
+      id: 2,
+      name: "Violet Weave Toggle",
+      category: "Chunky",
+      price: "£18",
+      material: "Woven Cord & Silver Toggle",
+      description: "Chunky lavender and purple herringbone-woven braid with a classic silver toggle clasp — bold and tactile.",
+      color: "#E8D9F0",
+      tag: "New Arrival",
+      Image: "./images/IMG_9290.JPG",
+    },
+    {
+      id: 3,
+      name: "Royal Gold Cord",
+      category: "Chunky",
+      price: "£16",
+      material: "Thick Woven Cord & Lobster Clasp",
+      description: "Bold solid Gold chunky rope bracelet with silver end caps and an extender chain.",
+      color: "#D0D8F0",
+      tag: "Popular",
+      Image: "./images/IMG_9289.JPG",
+    },
+    {
+      id: 4,
+      name: "Cobalt Rope Braid",
+      category: "Chunky",
+      price: "£16",
+      material: "Thick Cord & Lobster Clasp",
+      description: "Vivid royal blue chunky cord bracelet with silver end caps and lobster clasp — a bold pop of colour.",
+      color: "#C8D4F0",
+      tag: "Exclusive",
+      Image: "./images/IMG_9288.JPG",
+    },
+    {
+      id: 5,
+      name: "Blush Rope Toggle",
+      category: "Chunky",
+      price: "£18",
+      material: "Woven Cord & Toggle Clasp",
+      description: "Soft blush pink and lavender chunky woven rope with a classic silver toggle for easy fastening.",
+      color: "#F9E8E8",
+      tag: "Bestseller",
+      Image: "./images/IMG_9287.JPG",
+    },
+    {
+      id: 6,
+      name: "Dusk Duo Bangle",
+      category: "Slim",
+      price: "£14",
+      material: "Fine Multi-strand Cord & Lobster Clasp",
+      description: "Delicate silver-toned multi-strand slim bangle — understated and elegant for everyday wear.",
+      color: "#EDE0F5",
+      tag: "Limited",
+      Image: "./images/IMG_9282.JPG",
+    },
+    {
+      id: 7,
+      name: "Rust & Purple Slim",
+      category: "Slim",
+      price: "£12",
+      material: "Twisted Cord & Lobster Clasp",
+      description: "Minimalist dark twisted cord bracelet with a silver chain extension — subtle and wearable every day.",
+      color: "#E8E8E8",
+      tag: "New Arrival",
+      Image: "./images/IMG_9264.JPG",
+    },
+    {
+      id: 8,
+      name: "Plum & Blush Toggle",
+      category: "Slim",
+      price: "£12",
+      material: "Twisted Cord & Chain",
+      description: "Slender twisted cord bracelet with a fine silver chain extension — minimal and refined.",
+      color: "#F5E0E8",
+      tag: "Bestseller",
+      Image: "./images/IMG_9263.JPG",
+    },
+    {
+      id: 9,
+      name: "Ocean & Silver Hook",
+      category: "Chunky",
+      price: "£16",
+      material: "Woven Cord & Hook Closure",
+      description: "Striking blue and white chunky woven bracelet with a handmade hook closure — bold and beachy.",
+      color: "#D0E8F5",
+      tag: "Artisan Pick",
+      Image: "./images/IMG_9262.JPG",
+    },
+    {
+      id: 10,
+      name: "Berry Slim Braid",
+      category: "Slim",
+      price: "£12",
+      material: "Braided Cord & Chain",
+      description: "Dainty pink and purple slim braided cord with a delicate silver chain and lobster clasp.",
+      color: "#F0D8E8",
+      tag: "Artisan Pick",
+      Image: "./images/IMG_9261.JPG",
+    },
+    {
+      id: 11,
+      name: "Copper Slim Twist",
+      category: "Slim",
+      price: "£12",
+      material: "Twisted Cord & Lobster Clasp",
+      description: "Warm rust-red slim twisted cord bracelet with a lobster clasp — earthy and effortless.",
+      color: "#F5DDD0",
+      tag: "Artisan Pick",
+      Image: "./images/IMG_9260.JPG",
+    },
+    {
+      id: 12,
+      name: "Plum Chunky Braid",
+      category: "Chunky",
+      price: "£16",
+      material: "Woven Cord & Lobster Clasp",
+      description: "Rich deep purple chunky woven cord bracelet with silver end caps and extender chain.",
+      color: "#E0D0F0",
+      tag: "Artisan Pick",
+      Image: "./images/IMG_9259.JPG",
+    },
+    {
+      id: 13,
+      name: "Silver Chain Slim",
+      category: "Slim",
+      price: "£12",
+      material: "Fine Cord & Silver Chain",
+      description: "Delicate silver and neutral slim bracelet with a fine chain — perfect for layering.",
+      color: "#ECECEC",
+      tag: "Artisan Pick",
+      Image: "./images/IMG_9258.JPG",
+    },
+    {
+      id: 14,
+      name: "Violet Slim Cord",
+      category: "Slim",
+      price: "£12",
+      material: "Twisted Cord & Lobster Clasp",
+      description: "Elegant slim dark purple twisted cord bracelet with silver lobster clasp and extension chain.",
+      color: "#D8D0F0",
+      tag: "Artisan Pick",
+      Image: "./images/IMG_9257.JPG",
+    },
+    {
+      id: 15,
+      name: "Copper Hook Braid",
+      category: "Chunky",
+      price: "£18",
+      material: "Woven Cord & Copper Hook",
+      description: "Chunky tan and brown woven rope bracelet with a handcrafted copper arrowhead hook closure — rustic and refined.",
+      color: "#F5EAD9",
+      tag: "Artisan Pick",
+      Image: "./images/IMG_9256.JPG",
+    },
+    {
+      id: 16,
+      name: "Monochrome Weave",
+      category: "Chunky",
+      price: "£16",
+      material: "Woven Cord & Toggle Clasp",
+      description: "Classic black and white chunky herringbone-weave bracelet with a silver toggle clasp — timeless and bold.",
+      color: "#E8E8E8",
+      tag: "Artisan Pick",
+      Image: "./images/IMG_9255.JPG",
+    },
+    {
+      id: 17,
+      name: "Pastel Trio Charm",
+      category: "Slim",
+      price: "£14",
+      material: "Multi-strand Cord & Charm Clasp",
+      description: "Playful blue, pink and lilac multi-strand slim bracelet with a dainty silver charm and lobster clasp.",
+      color: "#E0F0F5",
+      tag: "Artisan Pick",
+      Image: "./images/IMG_9253.JPG",
+    },
+    {
+      id: 18,
+      name: "Ivory Rope Toggle",
+      category: "Chunky",
+      price: "£18",
+      material: "Woven Cord & Silver Toggle",
+      description: "Clean ivory and silver chunky woven bangle with a polished toggle clasp — minimal and elegant.",
+      color: "#F5ECD9",
+      tag: "Bestseller",
+      Image: "./images/IMG_9252.JPG",
+    },
+  ];
+
+  let currentFilter = "All";
+  let currentIndex = 0;
+
+  function getFiltered() {
+    if (currentFilter === "All") return pieces;
+    return pieces.filter(p => p.category === currentFilter);
+  }
+
+  function initials(name) {
+    return name.split(" ").slice(0, 2).map(w => w[0]).join("");
+  }
+
+  function buildCard(piece, position) {
+    // position: -1 = left, 0 = main, 1 = right
+    const isMain = position === 0;
+    const card = document.createElement("div");
+    card.className = "bracelet-card" + (isMain ? " main" : "");
+
+    card.innerHTML = `
+     <div class="card-image" style="background:${piece.color}">
+    ${piece.Image ? `<img src="${piece.Image}" class="card-img-content" alt="${piece.name}">` : `<div class="card-initials">${initials(piece.name)}</div>`}
+        <div class="card-tag-flag">${piece.tag}</div>
+        <span class="card-add-photo">Add photo</span>
+      </div>
+      <div class="card-body">
+        <span class="card-tag-badge">${piece.tag}</span>
+        <p class="card-name">${piece.name}</p>
+        <p class="card-material">${piece.material}</p>
+        <p class="card-description">${piece.description}</p>
+        <div class="card-footer">
+          <span class="card-price">${piece.price}</span>
+          <button class="card-view-btn">Buy Now</button>
+        </div>
+      </div>
+    `;
+    return card;
+  }
+
+  function renderCarousel() {
+    const filtered = getFiltered();
+    const total = filtered.length;
+    if (total === 0) return;
+
+    // Clamp index
+    if (currentIndex >= total) currentIndex = 0;
+
+    const track = document.getElementById("cards-track");
+    track.innerHTML = "";
+
+    const isMobile = window.innerWidth < 768;
+
+    if (isMobile) {
+      track.appendChild(buildCard(filtered[currentIndex], 0));
+    } else {
+      const offsets = [-1, 0, 1];
+      offsets.forEach(offset => {
+        const idx = (currentIndex + offset + total) % total;
+        track.appendChild(buildCard(filtered[idx], offset));
+      });
+    }
+
+    // Dots
+    const dotsEl = document.getElementById("carousel-dots");
+    dotsEl.innerHTML = "";
+    filtered.forEach((_, i) => {
+      const dot = document.createElement("button");
+      dot.className = "carousel-dot" + (i === currentIndex ? " active" : "");
+      dot.setAttribute("aria-label", `Go to item ${i + 1}`);
+      dot.addEventListener("click", () => {
+        currentIndex = i;
+        renderCarousel();
+      });
+      dotsEl.appendChild(dot);
+    });
+
+    // Counter
+    document.getElementById("carousel-counter").textContent =
+      String(currentIndex + 1).padStart(2, "0") + " / " + String(total).padStart(2, "0");
+  }
+
+  function init() {
+    // Filter buttons
+    document.querySelectorAll(".filter-btn").forEach(btn => {
+      btn.addEventListener("click", function () {
+        document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+        this.classList.add("active");
+        currentFilter = this.dataset.filter;
+        currentIndex = 0;
+        renderCarousel();
+      });
+    });
+
+    // Arrow buttons
+    document.getElementById("prev-btn").addEventListener("click", () => {
+      const filtered = getFiltered();
+      currentIndex = (currentIndex - 1 + filtered.length) % filtered.length;
+      renderCarousel();
+    });
+
+    document.getElementById("next-btn").addEventListener("click", () => {
+      const filtered = getFiltered();
+      currentIndex = (currentIndex + 1) % filtered.length;
+      renderCarousel();
+    });
+
+    // Resize — re-render for mobile/desktop switch
+    window.addEventListener("resize", renderCarousel);
+
+    renderCarousel();
+  }
+
+  document.addEventListener("DOMContentLoaded", init);
+})();

@@ -1,0 +1,318 @@
+/* =============================================
+   ABOUT PAGE — about.css
+   ============================================= */
+
+.about-page {
+  padding-top: 70px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fdf8f0 0%, #fff 50%, #fdf5f5 100%);
+}
+
+/* Hero banner */
+.about-banner {
+  background: var(--dark);
+  padding: 5rem 1.5rem 4rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(212,175,55,0.06) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.about-banner h1 {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  color: var(--gold-light);
+  letter-spacing: 0.1em;
+  font-weight: 300;
+  margin-bottom: 0.6rem;
+}
+
+.about-banner p {
+  font-size: 0.9rem;
+  color: var(--gold-mid);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* Decorative line */
+.about-banner-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.about-banner-line span {
+  display: block;
+  height: 1px;
+  width: 60px;
+  background: rgba(212,175,55,0.4);
+}
+
+.about-banner-diamond {
+  width: 7px;
+  height: 7px;
+  background: var(--gold);
+  transform: rotate(45deg);
+  opacity: 0.6;
+}
+
+/* Main content */
+.about-content {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 3.5rem 2rem 4rem;
+}
+
+
+
+
+.about-offer-list li{
+
+display: flex;
+margin-left: 50%;
+transform: translateX(-50%);
+white-space: nowrap;
+}
+
+/* 1. Add text-align: center to the container */
+.about-section {
+  margin-bottom: 3.5rem;
+  text-align: center; /* This centers the h2 and the P tags */
+}
+
+.about-section h2 {
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  color: var(--text-dark);
+  letter-spacing: 0.04em;
+  margin-bottom: 1.2rem;
+  position: relative;
+  display: inline-block; /* Keep this to make the underline match text width */
+}
+
+/* 2. Fix the underline (::after) margin */
+.about-section h2::after {
+  content: '';
+  display: block;
+  height: 1.5px;
+  width: 40px;
+  background: var(--gold-mid);
+  margin: 0.5rem auto 0; /* Changed 'margin-top' to 'margin: auto' to center the line */
+}
+
+/* 3. Reset text-alignment for paragraph if you want it left-aligned */
+.about-section p {
+  color: #555;
+  line-height: 1.9;
+  font-size: 1rem;
+  font-weight: 300;
+  text-align: left; /* Keep the story text readable while title is centered */
+}
+/* Image */
+.about-image-wrap {
+  margin: 3rem 0;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.about-image-wrap img {
+  width: 100%;
+  height:clamp( 300px ,60vw,400px);
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  filter: grayscale(0.15);
+}
+
+
+
+
+/* Offer list */
+.about-offer-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.about-offer-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  color: #555;
+  line-height: 1.6;
+  font-size: 0.98rem;
+}
+
+.offer-bullet {
+  flex-shrink: 0;
+  width: 6px;
+  height: 6px;
+  background: var(--gold-mid);
+  transform: rotate(45deg);
+  margin-top: 0.55rem;
+}
+
+/* CTA */
+.about-cta {
+  text-align: center;
+  padding: 2.5rem 0 0;
+  border-top: 0.5px solid var(--border);
+  margin-top: 3rem;
+}
+
+.about-cta p {
+  color: #666;
+  margin-bottom: 1.4rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+}
+
+.about-cta a{
+  
+  text-decoration: none;
+background-color: black;
+color: white;
+padding: 10px;
+border-radius: 5px;
+}
+
+footer {
+    background-color:#f9f9f7;
+    color:black;
+    padding: 40px 20px 20px 20px;
+    font-family: "Libre Baskerville", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-col p {
+    padding: 0;
+    margin-block: 20px;
+    line-height: 2.6rem;
+}
+
+.footer-columns {
+    gap: 32px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-bottom: 32px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.footer-heading {
+    font-size: clamp(14px, 2.5vw, 16px);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+footer p {
+    margin: 0 0 8px 0;
+    width: auto;
+    text-align: left;
+}
+
+footer a {
+    text-decoration: none;
+    color:black;
+    text-align: left;
+    margin-left: 0;
+    margin-top: 0;
+    display: block;
+    padding: 4px 0;
+    font-size: clamp(13px, 2vw, 15px);
+    transition: color 0.2s ease;
+}
+
+footer a:hover {
+    color: #b30018;
+}
+
+.footer-col a img {
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.footer-bottom {
+    max-width: 1100px;
+    margin: 20px auto 0;
+    text-align: center;
+     border-top:1px solid black ;
+}
+
+.footer-bottom p {
+    font-size: clamp(10px, 2vw, 13px);
+    color: black;
+    margin: 0;
+    width: auto;
+}
+
+.footer-bottom a {
+    display: inline;
+    color: black;
+    margin-left: 12px;
+    font-size: inherit;
+}
+
+.footer-bottom a:hover {
+    color: #b30018;
+}
+
+.footerItems {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.footerLogo{
+
+  width: 180px;
+ 
+
+}
+
+.footerLogoContainer{display: flex;flex-direction: column;justify-self: center;}
+
+.footerLogoContainer p{text-align: center;}
+
+
+/* =============================================
+   RESPONSIVE
+   ============================================= */
+
+@media (max-width: 600px) {
+  .about-content {
+    padding: 2.5rem 1.2rem 3rem;
+    text-align: center;
+  }
+
+  
+   
+}
+
+@media (min-width: 768px) {
+
+
+ .footer-columns {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+        
+    }
