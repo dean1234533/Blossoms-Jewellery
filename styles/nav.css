@@ -24,6 +24,7 @@
   display: block;
   margin: -10px 0;
   width: clamp(180px, 20vw, 200px);
+  margin-left: -20px;
 }
 
 /* ── HAMBURGER BUTTON ── */
